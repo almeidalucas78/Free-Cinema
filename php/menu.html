@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/menu.css" type="text/css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper  purple darken-1">
+            <a href="#" id="imagem-logo" class="brand-logo"><img src="../img/icon5.png"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="center-aligh" href="#">FREE CINEMA</a></li>
+                <li><a href="#cadastro" class="waves-effect waves-left  blue lighten-2 btn modal-trigger">Registrar-se</a></li>
+                <li><a href="#login" class="waves-effect waves-left btn  blue lighten-2 modal-trigger">login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MODAL DE CADASTRO -->
+    <div class="modal" id="cadastro">
+        <div class="modal-content">
+
+            <form id="formulario" method="POST">
+
+
+                <div class="col s12 14 offset-14">
+                    <div class="card">
+
+                        <div class="card-action  center-align  purple darken-3 white-text">
+                            <h3>Cadastro</h3>
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="form-field">
+                                <label for="Usuario">Nome Completo</label>
+                                <input type="text" id="nome_usuario">
+                            </div><br>
+
+                            <div class="form-field ">
+                                <label>Sexo:</label><br><br>
+                                <label>
+                                                    <input class="radioM"name="sexo" type="radio" checked />
+                                                    <span>Masculino</span>
+                                                </label>
+                                <label class="radioF">
+                                                    <input name="sexo" type="radio" />
+                                                    <span>Feminino</span>
+                                                </label>
+                            </div><br>
+
+                            <div class="input-field">
+                                <label for="dataNascimento">Data de Nascimento</label><br>
+                                <input id="dataNascimento" type="date">
+                            </div><br>
+
+                            <div class="form-field">
+                                <label for="Usuario">Nome de  login</label>
+                                <input type="text" id="login_usuario">
+                            </div><br>
+
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email">
+                            </div><br>
+
+                            <div class="form-field">
+                                <label for="senha">Senha</label>
+                                <input type="password" id="senha">
+                            </div><br>
+
+                            <div class="form-field">
+                                <label for="senha2">Confirme sua senha</label>
+                                <input type="password" id="senha2">
+                            </div><br>
+
+
+                            <div class="form-field center-align ">
+                                <input type="submit" class="btn-large  purple darken-3" value="Cadastrar">
+                            </div><br>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a class="btn red lighten-1">Cancelar</a>
+        </div>
+    </div>
+
+
+    <!-- MODAL DE LOGIN -->
+
+    <div class="modal" id="login">
+        <div class="modal-content">
+
+            <form id="formularioLogin" method="POST">
+
+
+                <div class="col s12 14 offset-14">
+                    <div class="card">
+
+                        <div class="card-action  center-align  purple darken-3 white-text">
+                            <h3>Login</h3>
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="form-field">
+                                <label for="Email">Email</label>
+                                <input type="email" id="email">
+                            </div><br>
+
+                            <div class="form-field">
+                                <label for="senha2">Senha</label>
+                                <input type="password" id="senha">
+                            </div><br><br>
+
+                            <div class="form-field center-align ">
+                                <input type="submit" class="btn-large  purple darken-3" value="Entrar">
+                            </div><br>
+                        </div>
+
+
+            </form>
+
+            </div>
+
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <a class="btn red lighten-1">Cancelar</a>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.modal').modal();
+    });
+</script>
+
+</html
