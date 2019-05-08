@@ -2,3 +2,25 @@
     margin: 0;
     padding: 0;
 }
+
+body {}
+
+.background1 {
+    background-image: url(../img/contatobk.jpg);
+    height: 1080px;
+    width: 1920px;
+    position: relative;
+}
+
+#formatacao {
+    height: 70px;
+}
+
+.tamanho {
+    font-size: 30px;
+}
+
+#formatacao :hover {
+    background: #4a148c;
+    transition: 1s;
+}
