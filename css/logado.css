@@ -13,19 +13,12 @@ body {}
 }
 
 #formatacao {
-    height: 70px;
 }
 
 .tamanho {
     font-size: 30px;
 }
 
-#formatacao :hover {
-    background: #b71c1c;
-    transition: 1s;
-}
-
 ul :hover {
-    color: black;
-    font-size: 20px;
+    color: rgb(255, 253, 253);
 }

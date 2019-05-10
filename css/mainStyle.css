@@ -1,69 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker');
-@font-face {
-    font-family: normal;
-    src: url(../fontes/avengeance/normal.ttf);
-}
-
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-.preload {
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background-color: #000;
-    background-image: url('../images/721.gif');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
-body {
-    background-image: url(../img/bk11.png);
-}
-
-.area-formulario {
-    margin-left: 100px;
-}
-
-.posicao-btn {
-    margin-top: -100px;
+.background1 {
+    background-image: url(../img/contatobk.jpg);
+    height: 1080px;
+    width: 1920px;
     position: relative;
 }
 
-.radioF {
-    padding-left: 10px;
+nav {
+    background: #4a148c;
+    height: 64px;
 }
 
-
-/*tipografia*/
-
-
-/* fonte do titulo */
-
-.title-page {
-    margin-top: 80px;
-    font-size: 55px;
-    font-weight: bold;
-    font-family: normal;
-    color: #9c27b0;
-    letter-spacing: .2rem;
-    margin-left: 235px;
+.left :hover {
+    color: rgb(226, 145, 145);
+    font-size: 22px;
+    background: none;
+    transition: 0.3s;
 }
 
+.ajuda_formatacao:hover {
+    color: rgb(226, 145, 145);
+    font-size: 22px;
+    background: none;
+    transition: 0.3s;
+}
 
-/* legenda da pagina */
+nav:hover {
+    background: #b71c1c;
+    transition: all 1s;
+    height: 75px;
+}
 
-.legenda-page {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Permanent Marker', cursive;
-    color: #9c27b0;
-    letter-spacing: .2rem;
-    margin-left: 70px;
+.btn:hover {
+    background: #4a148c;
 }

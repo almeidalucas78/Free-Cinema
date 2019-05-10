@@ -7,37 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/menu.css" type="text/css">
+    <link rel="stylesheet" href="../css/mainStyle.css" type="text/css">
 
 </head>
 
 
 <body>
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a class="tamanho" href="#!">Ação</a></li>
+
+<ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Ação</a></li>
         <li><a href="#!">Aventura</a></li>
         <li class="divider"></li>
         <li><a href="#!">Comédia</a></li>
         <li><a href="#!">Romance</a></li>
         <li><a href="#!">Ficção</a></li>
+</ul>
 
+    <nav id="formatacao" class=" z-depth-5">
+        <div class="container"> 
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><img src="../img/flash.png"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filmes<i
+                                class="material-icons right"></i></a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">Lançamentos</a></li>
 
-    </ul>
-    <nav id="formatacao" class="deep-purple darken-3 z-depth-5">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center"><img src="../img/flash.png"></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filmes<i class="material-icons right"></i></a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">Lançamentos</a></li>
-
-            </ul>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Ajuda</a></li>
-                <li><a href="#cadastro" class="waves-effect btn  red accent-3 modal-trigger">Registrar</a></li>
-                <li><a href="#login" class="waves-effect  btn   red accent-3 modal-trigger ">login</a></li>
-            </ul>
+                </ul>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="ajuda_formatacao" href="#">Ajuda</a></li>
+                    <li><a href="#cadastro" class="btn red accent-3 modal-trigger">Registrar</a></li>
+                    <li><a href="#login" class="btn red accent-3 modal-trigger ">login</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="background1">
@@ -45,7 +48,7 @@
         <div class="modal" id="cadastro">
             <div class="modal-content">
 
-                <form id="formulario" method="POST">
+                <form id="formulario" action="conexao.php" method="POST">
 
 
                     <div class="col s12 14 offset-14">
@@ -59,44 +62,44 @@
 
                                 <div class="form-field">
                                     <label for="nome">Nome Completo</label>
-                                    <input type="text" id="nome">
+                                    <input required type="text" name="nome">
                                 </div><br>
 
                                 <div class="form-field ">
                                     <label>Sexo:</label><br><br>
                                     <label>
-                                                    <input class="radioM" id="sexo" name="sexo" type="radio" />
-                                                    <span>Masculino</span>
-                                                </label>
+                                        <input  required class="radioM" name="sexo" value="M" type="radio" />
+                                        <span>Masculino</span>
+                                    </label>
                                     <label class="radioF">
-                                                    <input id="sexo" name="sexo" type="radio" />
-                                                    <span>Feminino</span>
-                                                </label>
+                                        <input id="sexo" name="sexo" value="F" type="radio" />
+                                        <span>Feminino</span>
+                                    </label>
                                 </div><br>
 
                                 <div class="input-field">
                                     <label for="dataNascimento">Data de Nascimento</label><br>
-                                    <input id="nascimento" type="date">
+                                    <input  required name="nascimento" type="date">
                                 </div><br>
 
                                 <div class="form-field">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email">
+                                    <input  required type="email" name="email">
                                 </div><br>
 
                                 <div class="form-field">
                                     <label for="senha">Senha</label>
-                                    <input type="password" id="senha">
+                                    <input required  type="password" name="senha">
                                 </div><br>
 
                                 <div class="form-field">
                                     <label for="senha2">Confirme sua senha</label>
-                                    <input type="password" id="senha_confirmacao">
+                                    <input required type="password" name="senha2">
                                 </div><br>
 
 
                                 <div class="form-field center-align ">
-                                    <input type="submit" class="btn-large  purple darken-3" value="Cadastrar">
+                                    <input  type="submit" class="btn-large  purple darken-3" name="cadastrar" value="Cadastrar">
                                 </div><br>
 
                             </div>
@@ -148,16 +151,16 @@
 
                 </form>
 
-                </div>
-
-                </div>
-
-
             </div>
-            <div class="modal-footer">
-                <a class="btn red lighten-1">Cancelar</a>
-            </div>
+
         </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <a class="btn red lighten-1">Cancelar</a>
+    </div>
+    </div>
 
 
 
@@ -168,13 +171,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="../js/loading.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.modal').modal();
     });
 
     $(".dropdown-trigger").dropdown();
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems, options);
     });
