@@ -1,18 +1,3 @@
 <?php 
-
-   $database = 'free_cinema';
-   $user = 'root';
-   $server = '127.0.0.1:3306';
-   $password = '';
-
-    //criar conexao
-
-    $con = mysqli_connect($server, $user, $password, $database);
-
-    //verificar conexão
-
-    if(!$con){
-        die("falha de conexão: " .mysqli_connect_error());
-    }
-    echo "conexão efetuada!";
+$con= mysqli_connect('127.0.0.1:3306','root', '1234','free_cinema') or die ("Erro ao conectar");   
 ?>

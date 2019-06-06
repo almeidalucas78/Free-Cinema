@@ -8,9 +8,8 @@ create table cadastroUsuario(
     sexo varchar(1),
     nascimento date,
     email varchar(250),
-    senha varchar(20),
-    senha2 varchar(20));
+    senha varchar(20));
 
-	SELECT * FROM cadastroUsuarios;
+	SELECT * FROM cadastroUsuario;
 
     

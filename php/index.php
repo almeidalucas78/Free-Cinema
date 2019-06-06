@@ -1,3 +1,7 @@
+<?php  
+    require_once 'conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,26 +18,24 @@
 
 <body>
 
-<ul id="dropdown1" class="dropdown-content">
+    <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!">Ação</a></li>
         <li><a href="#!">Aventura</a></li>
         <li class="divider"></li>
         <li><a href="#!">Comédia</a></li>
         <li><a href="#!">Romance</a></li>
         <li><a href="#!">Ficção</a></li>
-</ul>
+    </ul>
 
     <nav id="formatacao" class=" z-depth-5">
-        <div class="container"> 
+        <div class="container">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo center"><img src="../img/flash.png"></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                     <li><a href="#">Home</a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filmes<i
-                                class="material-icons right"></i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filmes<i class="material-icons right"></i></a></li>
                     <li><a href="#">Séries</a></li>
                     <li><a href="#">Lançamentos</a></li>
-
                 </ul>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="ajuda_formatacao" href="#">Ajuda</a></li>
@@ -47,13 +49,9 @@
         <!-- MODAL DE CADASTRO -->
         <div class="modal" id="cadastro">
             <div class="modal-content">
-
-                <form id="formulario" action="conexao.php" method="POST">
-
-
+                <form id="formulario" action="cadastrar.php" method="POST">
                     <div class="col s12 14 offset-14">
                         <div class="card">
-
                             <div class="card-action  center-align  purple darken-3 white-text">
                                 <h3>Cadastro</h3>
                             </div>
@@ -68,7 +66,7 @@
                                 <div class="form-field ">
                                     <label>Sexo:</label><br><br>
                                     <label>
-                                        <input  required class="radioM" name="sexo" value="M" type="radio" />
+                                        <input required class="radioM" name="sexo" value="M" type="radio" />
                                         <span>Masculino</span>
                                     </label>
                                     <label class="radioF">
@@ -79,17 +77,17 @@
 
                                 <div class="input-field">
                                     <label for="dataNascimento">Data de Nascimento</label><br>
-                                    <input  required name="nascimento" type="date">
+                                    <input required name="nascimento" type="date">
                                 </div><br>
 
                                 <div class="form-field">
                                     <label for="email">Email</label>
-                                    <input  required type="email" name="email">
+                                    <input required type="email" name="email">
                                 </div><br>
 
                                 <div class="form-field">
                                     <label for="senha">Senha</label>
-                                    <input required  type="password" name="senha">
+                                    <input required type="password" name="senha">
                                 </div><br>
 
                                 <div class="form-field">
@@ -99,7 +97,7 @@
 
 
                                 <div class="form-field center-align ">
-                                    <input  type="submit" class="btn-large  purple darken-3" name="cadastrar" value="Cadastrar">
+                                    <input type="submit" class="btn-large  purple darken-3" name="cadastrar" value="Cadastrar">
                                 </div><br>
 
                             </div>
@@ -121,7 +119,7 @@
         <div class="modal" id="login">
             <div class="modal-content">
 
-                <form id="formularioLogin" method="POST">
+                <form id="formularioLogin" action="logar.php" method="POST">
 
 
                     <div class="col s12 14 offset-14">
@@ -135,16 +133,16 @@
 
                                 <div class="form-field">
                                     <label for="Email">Email</label>
-                                    <input type="email" id="email">
+                                    <input type="email" name="email" id="email">
                                 </div><br>
 
                                 <div class="form-field">
                                     <label for="senha">Senha</label>
-                                    <input type="password" id="senha">
+                                    <input type="password" name="senha" id="senha">
                                 </div><br><br>
 
                                 <div class="form-field center-align ">
-                                    <input type="submit" class="btn-large  purple darken-3" value="Entrar">
+                                    <input type="submit" name="entrar" class="btn-large  purple darken-3" value="Entrar">
                                 </div><br>
                             </div>
 
@@ -171,13 +169,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="../js/loading.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('.modal').modal();
     });
 
     $(".dropdown-trigger").dropdown();
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems, options);
     });

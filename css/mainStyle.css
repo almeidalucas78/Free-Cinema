@@ -17,22 +17,21 @@ nav {
 
 .left :hover {
     color: rgb(226, 145, 145);
-    font-size: 22px;
+    font-size: 19px;
     background: none;
     transition: 0.3s;
 }
 
 .ajuda_formatacao:hover {
     color: rgb(226, 145, 145);
-    font-size: 22px;
+    font-size: 19px;
     background: none;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 nav:hover {
     background: #b71c1c;
-    transition: all 1s;
-    height: 75px;
+    transition: all 0.3s;
 }
 
 .btn:hover {

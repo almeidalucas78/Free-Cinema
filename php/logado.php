@@ -1,3 +1,10 @@
+<?php  
+    require_once 'conexao.php';
+?>
+
+<?php
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -35,7 +42,17 @@
             
                         </ul>
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a href="#">Bem vindo, </a></li>
+                            <li><a href="#">Bem vindo,  <?php 
+                                $query = "SELECT nome FROM cadastroUsuario";
+                                $exe = mysqli_query($con, $query);
+
+                                        
+                                while($res = mysqli_fetch_assoc($exe)){
+                                   
+                                    echo $res['nome'];
+                            
+                               } ?>
+                            </a></li>
                             <li><a href="#cadastro" class="waves-effect btn  red accent-3 modal-trigger">Editar Perfil</a></li>
 
                         </ul>

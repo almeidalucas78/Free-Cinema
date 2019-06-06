@@ -1,6 +1,10 @@
 <?php
+if (
+    !empty($_POST['nome']) && !empty($_POST['sexo']) && !empty($_POST['nascimento'])
+    && !empty($_POST['email']) && !empty($_POST['senha']) && !empty($_POST['senha2'])
+) {
 
-require('conexao.php');
+    require_once 'conexao.php';
 
 
     $nome = $_POST['nome'];
@@ -9,18 +13,20 @@ require('conexao.php');
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $senha2 = $_POST['senha2'];
-    $OPCAO = $_POST['cadastrar'];
 
-
-if ($nome == "" || $sexo == "" || $nascimento == "" || $email == "" || $senha == "" || $senha2 = "") {
-    echo "<script language='javascript' type='text/javascript'>alert('os campos devem ser preenchidos');window.location.href='formulario.php';</script>";
-} else if ($OPCAO == 'inserir'{
-    $sql = "INSERT INTO cadastroUsuarios(nome, sexo, nascimento, email, senha, senha2) VALUES('$nome', '$sexo', '$nascimento', '$email', '$senha', '$senha2')";
-    $RETORNO = mysqli_query($icon,$sql);
-
-    if($RETORNO == true){
-        echo "<script language='javascript' type='text/javascript'>alert('cadastro Efetuado!');window.location.href='index.php';</script>"; 
+    if($senha === $senha2){
+        $query = "INSERT INTO cadastroUsuario (nome, sexo, nascimento, email, senha) VALUES ('$nome', '$sexo','$nascimento', '$email', '$senha')";
+        $insere = mysqli_query($con, $query);
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Cadastrado');
+        window.location.href='index.php';
+        </script>");
     }else{
-        echo "<script language='javascript' type='text/javascript'>alert('cadastro não efetuado!');window.location.href='index.php';</script>";
-        }
-    }
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('As senhas não correspodem');
+        window.location.href='index.php';
+        </script>");    }
+} else {
+    echo "preencha os campos corretamento, por gentileza rs";
+}
+?>
