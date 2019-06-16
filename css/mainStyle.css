@@ -3,37 +3,66 @@
     padding: 0;
 }
 
-.background1 {
+@font-face {
+    font-family: Ailerons;
+    src: url(../fontes/andrrs/Anders.ttf);
+}
+
+body {
+   
+}
+.background1{
     background-image: url(../img/contatobk.jpg);
-    height: 1080px;
     width: 1920px;
-    position: relative;
+    height: 1080px;
+}
+.background2{
+background-color: rgba(58, 29, 85, 0.7);
+    width: 1920px;
+    height: 1080px;
+
 }
 
-nav {
-    background: #4a148c;
-    height: 64px;
+nav{
+    height: 90px;
+    text-decoration: none;
 }
 
-.left :hover {
-    color: rgb(226, 145, 145);
-    font-size: 19px;
-    background: none;
-    transition: 0.3s;
+.itens-nav{
+    padding-top: 30px;
+}
+.title_menu {
+    font-size: 40px;
+    font-family: Ailerons;
+    color: #b71c1c;
 }
 
-.ajuda_formatacao:hover {
-    color: rgb(226, 145, 145);
-    font-size: 19px;
-    background: none;
-    transition: all 0.3s;
+.posicao-menu {
+    font-size: 50px;
+    margin-left: 35%;
 }
-
-nav:hover {
-    background: #b71c1c;
-    transition: all 0.3s;
+.itens-menu{
+    font-size: 20px;
+    color: #ccc;
+   
 }
+.itens-menu:hover{
+    color: white;
+    border-bottom: 1px solid red;
 
-.btn:hover {
-    background: #4a148c;
+
+}
+.title-page {
+    font-family: Ailerons;
+    font-size: 90px;
+    color: #b71c1c;
+    text-align: center;
+    margin-top: 60px;
+}
+.subtitulo-page{
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+    text-align: center; 
+    margin-bottom: 100px;
 }

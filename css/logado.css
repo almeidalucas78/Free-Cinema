@@ -3,13 +3,20 @@
     padding: 0;
 }
 
-body {}
-
-.background1 {
+@font-face {
+    font-family: Ailerons;
+    src: url(../fontes/andrrs/Anders.ttf);
+}
+.background1{
     background-image: url(../img/contatobk.jpg);
-    height: 1080px;
     width: 1920px;
-    position: relative;
+    height: 1080px;
+}
+.background2{
+background-color: rgba(58, 29, 85, 0.7);
+    width: 1920px;
+    height: 1080px;
+
 }
 
 #formatacao {
@@ -21,4 +28,37 @@ body {}
 
 ul :hover {
     color: rgb(255, 253, 253);
+}
+nav{
+    height: 90px;
+    text-decoration: none;
+}
+
+.itens-nav{
+    padding-top: 30px;
+}
+.title_menu {
+    font-size: 40px;
+    font-family: Ailerons;
+    color: #b71c1c;
+}
+
+.posicao-menu {
+    font-size: 50px;
+    margin-left: 35%;
+}
+.itens-menu{
+    font-size: 20px;
+    color: #ccc;
+   
+}
+.itens-menu2{
+    font-size: 20px;
+    color: #ccc;
+   }
+.itens-menu:hover{
+    color: white;
+    border-bottom: 1px solid red;
+
+
 }

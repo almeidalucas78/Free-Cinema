@@ -1,9 +1,9 @@
-<?php  
-    require_once 'conexao.php';
+<?php
+require_once 'conexao.php';
 ?>
 
 <?php
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
+    <link rel="icon" type="imagem/png" href="../img/icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/logado.css" type="text/css">
 
@@ -20,68 +21,56 @@
 
 
 <body>
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a class="  " href="#!">Ação</a></li>
-        <li><a href="#!">Aventura</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Comédia</a></li>
-        <li><a href="#!">Romance</a></li>
-        <li><a href="#!">Ficção</a></li>
-</ul>
-
-    <nav class="deep-purple darken-3 z-depth-5">
-        <div class="container">
-                <div class="nav-wrapper">
-                        <a href="#" class="brand-logo center"><img src="../img/flash.png"></a>
-                        <ul id="nav-mobile" class="left hide-on-med-and-down">
-                            <li><a href="#">Home</a></li>
-                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filmes<i
-                                        class="material-icons right"></i></a></li>
-                            <li><a href="#">Séries</a></li>
-                            <li><a href="#">Lançamentos</a></li>
-            
-                        </ul>
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a href="#">Bem vindo,  <?php 
-                                $query = "SELECT nome FROM cadastroUsuario";
-                                $exe = mysqli_query($con, $query);
-
-                                        
-                                while($res = mysqli_fetch_assoc($exe)){
-                                   
-                                    echo $res['nome'];
-                            
-                               } ?>
-                            </a></li>
-                            <li><a href="#cadastro" class="waves-effect btn  red accent-3 modal-trigger">Editar Perfil</a></li>
-
-                        </ul>
-                    </div>
-        </div>
-    </nav>
     <div class="background1">
+        <div class="background2">
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">Ação</a></li>
+                <li><a href="#!">Aventura</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Comédia</a></li>
+                <li><a href="#!">Romance</a></li>
+                <li><a href="#!">Ficção</a></li>
+            </ul>
 
+            <nav id="formatacao" class="transparent z-depth-0">
+                <div class="container itens-nav">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">
+                            <p class="title_menu">Free Cinema</p>
+                        </a>
+                        <ul id="nav-mobile" class="posicao-menu hide-on-med-and-down">
+                            <li><a class="dropdown-trigger itens-menu" href="#!" data-target="dropdown1">Filmes<i class="material-icons right"></i></a></li>
+                            <li><a class="itens-menu" href="#">Séries</a></li>
+                            <li><a class="itens-menu" href="#">Animes</a></li>
+                            <li><a class="itens-menu" href="#">Lançamentos</a></li>
+                            <li class="itens-menu2" href="#">||</li>
+                            <li><a class="itens-menu2" href="#">Bem vindo,
+                                    <?php
+                                    session_start();
+                                    echo $_SESSION['nome'];
+                                    ?>
+                                </a></li>
+                        </ul>
 
-
-
-    </div>
+                    </div>
+                </div>
+            </nav>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="../js/loading.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('.modal').modal();
     });
 
     $(".dropdown-trigger").dropdown();
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems, options);
     });
-
 </script>
 
 </html>
