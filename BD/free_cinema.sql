@@ -10,6 +10,7 @@ drop table cadastroUsuario(
     email varchar(250),
     senha varchar(20));
 
-	SELECT * FROM cadastroUsuario;
+	SELECT * FROM cadastroUsuario;	
+
 
     

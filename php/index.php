@@ -41,8 +41,8 @@ require_once 'conexao.php';
                             <li><a class="itens-menu" href="#">Séries</a></li>
                             <li><a class="itens-menu" href="#">Animes</a></li>
                             <li><a class="itens-menu" href="#">Lançamentos</a></li>
-                            <li><a href="#cadastro" class="btn purple darken-2 modal-trigger">Registrar</a></li>
-                            <li><a href="#login" class="btn red accent-3 modal-trigger ">login</a></li>
+                            <li><a href="#cadastro" class="btn btn1 modal-trigger">Registrar</a></li>
+                            <li><a href="#login" class="btn btn2 modal-trigger ">login</a></li>
                         </ul>
 
                     </div>
@@ -51,7 +51,6 @@ require_once 'conexao.php';
 
             <!-- MODAL DE CADASTRO -->
             <div class="modal" id="cadastro">
-
                 <div class="modal-content">
                     <form id="formulario" action="cadastrar.php" method="POST">
                         <div class="col s12 14 offset-14">
@@ -101,7 +100,7 @@ require_once 'conexao.php';
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn red lighten-1">Cancelar</a>
+                    <a class="btn red lighten-1 modal-close">Cancelar</a>
                 </div>
             </div>
 
@@ -134,7 +133,7 @@ require_once 'conexao.php';
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn red lighten-1">Cancelar</a>
+                    <a class="btn red lighten-1 modal-close">Cancelar</a>
                 </div>
             </div>
 
@@ -144,8 +143,8 @@ require_once 'conexao.php';
                 <div class="row">
                     <div class="col s12">
 
-                        <p class="title-page">Free Cinema</p>
-                        <p class="subtitulo-page">ENTRE PARA TER ACESSO A FILMES, SERIES E ANIMES ONLINE</p>
+                        <h1 class="title-page">Free Cinema</h1>
+                        <h2 class="subtitulo-page">ENTRE PARA TER ACESSO A FILMES, SERIES E ANIMES ONLINE</h2>
 
                     </div>
                 </div>
@@ -154,38 +153,39 @@ require_once 'conexao.php';
                     <div class="col s4 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="../img/got.jpeg">
+                                <img class="materialboxed" src="../img/got.jpeg">
                                 <span class="card-title">Game Of Thrones</span>
                             </div>
                             <div class="card-content">
-                                <p>Famílias nobres e poderosas disputam um jogo mortal pelo controle dos Sete Reinos
-                                    de Westeros para assumir o Trono de Ferro.</p>
+                                <p>Situada nos continentes fictícios de Westeros e Essos, a série centra-se no Trono de Ferro dos Sete Reinos e segue um enredo de 
+                                    alianças e conflitos entre as famílias nobres dinásticas.</p>
+
+
                             </div>
                             <div class="card-action">
-                                <a href="#">Faça login para assistir</a>
+                                <a href="#formatacao">Faça login para assistir</a>
                             </div>
                         </div>
                     </div>
                     <div class="col s4 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="../img/vingadores.jpg">
+                                <img class="materialboxed" src="../img/vingadores.jpg">
                                 <span class="card-title">Vingadores Ultimato</span>
                             </div>
                             <div class="card-content">
-                                <p> Vingadores têm de lidar com a perda de amigos e entes
-                                    queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram
+                                <p> Vingadores lidam com a perda de amigos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram
                                     a resistência contra o titã louco.</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Faça login para assistir</a>
+                                <a href="#formatacao">Faça login para assistir</a>
                             </div>
                         </div>
                     </div>
                     <div class="col s4 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img src="../img/bomba.jpg">
+                                <img class="materialboxed" src="../img/bomba.jpg">
                                 <span class="card-title">Chernobyl</span>
                             </div>
                             <div class="card-content">
@@ -193,12 +193,12 @@ require_once 'conexao.php';
                                     Nuclear de Chernobyl sofre um acidente nuclear em 25 de abril de 1986.</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Faça login para assistir</a>
+                                <a href="#formatacao">Faça login para assistir</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
 
                 <div class="row">
                     <div class="col s12">
@@ -230,6 +230,24 @@ require_once 'conexao.php';
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems, options);
     });
+</script>
+<script>
+    function typeWriter(elemento) {
+        const textoArray = elemento.innerHTML.split('');
+        elemento.innerHTML = '';
+        textoArray.forEach((letra, i) => {
+            setTimeout(() =>
+                elemento.innerHTML += letra ,75 * i);
+        });
+    }
+
+    const titulo = document.querySelector('h1');
+    typeWriter(titulo);
+
+    typeWriter(document.querySelector('.subtitulo-page'));
+
+
+     
 </script>
 
 </html>
